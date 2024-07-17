@@ -1,3 +1,3 @@
-# get_app
+# Flutter get x
 
-A new Flutter project.
+Shopping app
