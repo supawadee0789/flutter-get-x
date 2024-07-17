@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:get_app/modules/cart/bindings/cart_binding.dart';
+import 'package:get_app/modules/cart/views/cart_view.dart';
 import 'package:get_app/modules/detail/bindings/detail_binding.dart';
 import 'package:get_app/modules/detail/views/detail_view.dart';
 import 'package:get_app/modules/home/bindings/home_binding.dart';
@@ -12,9 +14,13 @@ abstract class AppPages {
       page: () => const HomePage(),
       bindings: [
         HomeBinding(),
+        CartBinding(),
         DetailBinding(),
       ],
-      children: [GetPage(name: Routes.DETAIL, page: () => const DetailPage())],
+      children: [
+        GetPage(name: Routes.DETAIL, page: () => const DetailPage()),
+        GetPage(name: Routes.CART, page: () => const CartPage())
+      ],
     ),
   ];
 }

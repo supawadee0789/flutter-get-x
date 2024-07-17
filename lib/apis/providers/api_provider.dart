@@ -24,7 +24,6 @@ class ApiProvider {
         case 'GET':
           final res = await _dio.get('$_baseUrl$endpoint');
           if (res.statusCode == 200) {
-            print(res.data);
             return ResponseData(
                 data: res.data, isSuccess: true, errorStatusCode: 0);
           } else {
